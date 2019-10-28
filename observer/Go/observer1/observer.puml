@@ -1,0 +1,17 @@
+@startuml
+
+interface Observer {
+  Notify(message s)
+}
+class Publisher {
+  AddObserver(Observer o)
+  RemoveObserver(Observer o)
+  NotifyObservers(message s)
+}
+
+class TestObserver implements Observer {
+}
+
+Observer <-- Publisher
+
+@enduml
